@@ -14,7 +14,7 @@
         integrity='sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65' crossorigin='anonymous'>
 </head>
 
-<body class="bg-secondary">
+<body class="bg-secondary" onload="updateTicketPrice()">
     <div class="container">
         <div class="d-flex justify-content-center align-items-center vh-100">
             <div class="card bg-dark text-light text-center">
@@ -25,14 +25,14 @@
                     <h5 class="card-title">Ti calcoliamo noi il prezzo del tuo biglietto!</h5>
                     <p class="card-text">...con algoritmi sofisticati...</p>
                     
-                    <input type="text" class="form-control mb-2" placeholder="La tua età...">
+                    <input id="inputAge" type="text" class="form-control mb-2" placeholder="La tua età..." onkeyup="updateTicketPrice()">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Km che vuoi percorrere...">
-                        <span class="input-group-text">Km</span>
+                        <input id="inputKm" type="text" class="form-control" placeholder="Km che vuoi percorrere..." onkeyup="updateTicketPrice()">
+                        <span class="input-group-text bg-dark text-white">Km</span>
                     </div>
 
                     <p id="result">
-                        Prezzo: 0,00 €
+                        
                     </p>
                 </div>
                 <div class="card-footer text-muted">
